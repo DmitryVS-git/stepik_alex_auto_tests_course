@@ -18,8 +18,8 @@ try:
     # btn_vivible = driver.find_element(By.ID, 'visibleAfter')
     # btn_vivible.click()
 
-    btn_vivible = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID, 'visibleAfter')))
-    btn_vivible.click()
+    btn_visible = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID, 'visibleAfter')))
+    btn_visible.click()
 
 
 
