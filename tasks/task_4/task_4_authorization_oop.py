@@ -1,4 +1,4 @@
-from login_page import Login_page
+from login_page import LoginPage
 
 import time
 
@@ -6,10 +6,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver import ActionChains, Keys
+from selenium.webdriver import Keys
 
 
-class Test_1:
+class Test1:
     def test_login(self):
         driver = webdriver.Chrome()
         base_url = 'https://www.saucedemo.com/'
@@ -21,7 +21,7 @@ class Test_1:
 
         print('++++++++++++++++ Start Test_1 ++++++++++++++++\n')
 
-        login_page = Login_page(driver)
+        login_page = LoginPage(driver)
 
         for login in logins:
             # Authorization
@@ -77,5 +77,5 @@ class Test_1:
         print('++++++++++++++++ FINISH Test_1 ++++++++++++++++\n')
 
 
-test = Test_1()
+test = Test1()
 test.test_login()
